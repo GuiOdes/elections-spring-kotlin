@@ -5,18 +5,18 @@ import java.time.LocalDate
 import javax.persistence.*
 
 @Entity
-@Table(name = "tb_person")
-open class Person (
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+open abstract class Person (
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     val id: Long? = null,
+     open val id: Long? = null,
 
      @Column
-     var name: String,
+     open var name: String,
 
      @Column
-     val birth: LocalDate,
+     open val birth: LocalDate,
 
      @Enumerated(EnumType.STRING)
-     val gender: Gender
+     open val gender: Gender
 )
