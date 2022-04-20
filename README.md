@@ -14,3 +14,5 @@
 - JDK 18
 - Gradle
 - Hibernate and JPA
+
+* To access the code, switch to Develop branch
