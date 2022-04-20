@@ -2,26 +2,22 @@ package com.kotlin.elections.model
 
 import com.kotlin.elections.model.enums.Gender
 import java.time.LocalDate
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.OneToMany
 
 @Entity
-class Candidate (
-
+class Voter (
     name: String,
     birth: LocalDate,
     gender: Gender,
 
     @Column
-    val number: Int,
+    val cpf: String,
 
-    @Column
-    var votes: Int,
+    @OneToMany(mappedBy = "voter")
+    var votes: List<Vote>
 
-    @ManyToMany(mappedBy = "candidateList")
-    var elections: List<Election>,
-
-    @OneToMany(mappedBy = "winner")
-    var wonElections: List<Election>
 ) : Person (
     name = name,
     birth = birth,
