@@ -6,10 +6,10 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "tb_person")
-class Person (
+open class Person (
      @Id
      @GeneratedValue(strategy = GenerationType.AUTO)
-     val id: Long,
+     val id: Long? = null,
 
      @Column
      var name: String,
