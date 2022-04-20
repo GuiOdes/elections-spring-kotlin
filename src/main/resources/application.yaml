@@ -1,0 +1,14 @@
+# DATA SOURCE
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/elections?createDatabaseIfNotExist=true&serverTimezone=UTC
+    username: root
+    password: 123456
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  jackson:
+    default-property-inclusion: non_null
