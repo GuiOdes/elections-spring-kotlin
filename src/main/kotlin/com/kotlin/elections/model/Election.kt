@@ -12,18 +12,18 @@ class Election (
     val id: Long?,
 
     @Column
-    val dateElection: LocalDate,
+    var dateElection: LocalDate,
 
     @Enumerated(EnumType.STRING)
     val electionType: ElectionType,
 
     @JoinColumn
     @ManyToMany
-    var candidateList: List<Candidate>,
+    var candidateList: MutableList<Candidate>,
 
     @JoinColumn
     @ManyToOne
-    val winner: Candidate?,
+    var winner: Candidate?,
 
     @OneToMany(mappedBy = "election")
     val votes: List<Vote>
