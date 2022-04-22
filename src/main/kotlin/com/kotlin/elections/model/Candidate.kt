@@ -14,9 +14,6 @@ class Candidate (
     @Column
     val number: Int,
 
-    @Column
-    var votes: Int,
-
     @ManyToMany(mappedBy = "candidateList")
     var elections: List<Election>,
 
