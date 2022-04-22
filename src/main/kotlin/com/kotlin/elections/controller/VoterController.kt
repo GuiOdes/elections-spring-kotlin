@@ -26,7 +26,7 @@ class VoterController(
         return service.create(voter)
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     fun update(@RequestBody voter: Voter): ResponseEntity<Voter> {
         return service.update(voter)
     }

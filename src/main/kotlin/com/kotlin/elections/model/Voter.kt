@@ -16,7 +16,7 @@ class Voter (
     var cpf: String,
 
     @OneToMany(mappedBy = "voter")
-    var votes: List<Vote>
+    var votes: List<Vote>?
 
 ) : Person (
     name = name,

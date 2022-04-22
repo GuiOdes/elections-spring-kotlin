@@ -15,10 +15,10 @@ class Candidate (
     var number: Int,
 
     @ManyToMany(mappedBy = "candidateList")
-    var elections: List<Election>,
+    var elections: List<Election>?,
 
     @OneToMany(mappedBy = "winner")
-    var wonElections: List<Election>
+    var wonElections: List<Election>?
 ) : Person (
     name = name,
     birth = birth,

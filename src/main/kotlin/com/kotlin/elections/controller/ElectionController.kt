@@ -32,7 +32,7 @@ class ElectionController(
         return service.create(election)
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     fun update(@RequestBody election: Election): ResponseEntity<Election> {
         return service.update(election)
     }

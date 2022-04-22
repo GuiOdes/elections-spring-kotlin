@@ -46,7 +46,7 @@ class ElectionService(
     fun candidateAdd(election: Election, candidate: Candidate): ResponseEntity<Election>{
         return repository.findById(election.id!!)
             .map {
-                it.candidateList.add(candidate)
+                it.candidateList!!.add(candidate)
                 ResponseEntity(repository.save(it), HttpStatus.CREATED)
             }
             .orElse(ResponseEntity.badRequest().build())
@@ -55,7 +55,7 @@ class ElectionService(
     fun candidateRemove(election: Election, candidate: Candidate): ResponseEntity<Election> {
         return repository.findById(election.id!!)
             .map {
-                election.candidateList.remove(candidate)
+                election.candidateList!!.remove(candidate)
                 ResponseEntity(election, HttpStatus.OK)
             }
             .orElse(ResponseEntity(election, HttpStatus.NOT_FOUND))

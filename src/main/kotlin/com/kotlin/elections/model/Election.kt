@@ -19,12 +19,12 @@ class Election (
 
     @JoinColumn
     @ManyToMany
-    var candidateList: MutableList<Candidate>,
+    var candidateList: MutableList<Candidate>?,
 
     @JoinColumn
     @ManyToOne
     var winner: Candidate?,
 
     @OneToMany(mappedBy = "election")
-    val votes: List<Vote>
+    val votes: List<Vote>?
 )

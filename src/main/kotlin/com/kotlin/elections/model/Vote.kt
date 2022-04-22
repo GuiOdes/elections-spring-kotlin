@@ -7,7 +7,7 @@ import javax.persistence.*
 class Vote(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long? = null,
+    val id: Long?,
 
     @JoinColumn
     @ManyToOne

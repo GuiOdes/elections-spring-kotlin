@@ -27,7 +27,7 @@ class CandidateController(
         return service.create(candidate)
     }
 
-    @PostMapping("/update")
+    @PutMapping("/update")
     fun update(@RequestBody candidate: Candidate): ResponseEntity<Candidate> {
         return service.update(candidate)
     }
