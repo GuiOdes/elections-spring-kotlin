@@ -6,6 +6,8 @@ import com.kotlin.elections.service.ElectionService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@RestController
+@RequestMapping("/election")
 class ElectionController(
     val service: ElectionService
 ) {
