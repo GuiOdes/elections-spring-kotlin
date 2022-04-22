@@ -15,8 +15,8 @@ open abstract class Person (
      open var name: String,
 
      @Column
-     open val birth: LocalDate,
+     open var birth: LocalDate,
 
      @Enumerated(EnumType.STRING)
-     open val gender: Gender
+     open var gender: Gender
 )

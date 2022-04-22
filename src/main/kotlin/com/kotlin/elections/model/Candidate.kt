@@ -12,7 +12,7 @@ class Candidate (
     gender: Gender,
 
     @Column
-    val number: Int,
+    var number: Int,
 
     @ManyToMany(mappedBy = "candidateList")
     var elections: List<Election>,
