@@ -42,12 +42,12 @@ class ElectionController(
         return service.deleteBy(id)
     }
 
-    @PostMapping("/candidades/add")
+    @PostMapping("/candidates/add")
     fun candidateAdd(@RequestBody election: Election, @RequestBody candidate: Candidate): ResponseEntity<Election> {
         return service.candidateAdd(election, candidate)
     }
 
-    @PostMapping("/candidades/add")
+    @PostMapping("/candidates/remove")
     fun candidateRemove(@RequestBody election: Election, @RequestBody candidate: Candidate): ResponseEntity<Election> {
         return service.candidateRemove(election, candidate)
     }
