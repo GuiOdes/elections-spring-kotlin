@@ -13,7 +13,7 @@ class Voter (
     gender: Gender,
 
     @Column
-    val cpf: String,
+    var cpf: String,
 
     @OneToMany(mappedBy = "voter")
     var votes: List<Vote>
